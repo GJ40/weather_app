@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+
+    <!-- Link to Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode" data-aos-easing="ease-out-back" data-aos-duration="1500">
+
+    <!-- Theme Toggle Button -->
+    <div class="absolute top-4 right-4">
+        <button id="theme-toggle" class="p-2 rounded-full border border-gray-300">
+            ☀️
+        </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-4xl mx-auto p-8">
+        <!-- Title -->
+        <h1 class="text-3xl text-center mb-8">Weather App</h1>
+
+        <!-- City Input Section -->
+        <div class="mb-4 text-center">
+            <input type="text" id="city" placeholder="Enter city..."
+                class="p-2 border rounded-md w-full md:w-2/3 mb-2" />
+            <button id="submit-btn"
+                class="bg-blue-500 text-white p-2 rounded-md w-full md:w-auto cursor-pointer">Submit</button>
+        </div>
+
+        <!-- Time and Location -->
+        <div id="coord-container" class="flex flex-col justify-end mt-8">
+            <div class="flex flex-row justify-around">
+                <span id="place">Place</span>
+                <span id="time">00:00:00</span>
+            </div>
+        </div>
+
+        <!-- Weather Display -->
+        <div id="weather-container" class="hidden text-center mt-4">
+            <div id="weather-icon" class="flex flex-col justify-center items-center"></div>
+            <div id="weather-description" class="text-xl mt-2"></div>
+            <div id="temperature" class="text-3xl font-semibold mt-4"></div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="text-red-500 hidden text-center mt-4">Please enter a valid city name.</div>
+
+        <!-- Additional Data Section -->
+        <div id="additional-data" class="hidden mt-12" data-aos="fade-up">
+
+            <!-- Wind Speed, Humidity, and Visibility -->
+            <div class="flex justify-around mb-8">
+                <div class="text-center">
+                    <h3 class="text-lg">Wind Speed</h3>
+                    <i class="fas fa-wind text-4xl text-blue-500"></i>
+                    <p id="wind-speed" class="text-2xl font-semibold"></p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg">Humidity</h3>
+                    <i class="fas fa-tint text-4xl text-green-500"></i>
+                    <p id="humidity" class="text-2xl font-semibold"></p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-lg">Visibility</h3>
+                    <i class="fas fa-eye text-4xl text-gray-500"></i>
+                    <p id="visibility" class="text-2xl font-semibold"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to handle functionality -->
+    <script src="script.js"></script>
+</body>
+
+</html>
