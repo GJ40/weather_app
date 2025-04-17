@@ -52,7 +52,7 @@ The Weather App is a simple, user-friendly application that allows users to get 
 
 ## Live Link
 
-- The project live hosted on github pages to access [click here](https://gj40.github.com/weather_app)
+- The project live hosted on github pages to access [click here](https://gj40.github.io/weather_app/)
 
 ## Acknowledgments
 
